@@ -6,18 +6,13 @@ function createMenu() {
 	mainmenu.className = "FORGEmenu";
 
 	menuitem = document.createElement('li');
-	menuitem.onmouseover = function() {
-		$('div','.FORGEmenu').css('display', 'block');
-	};
-	menuitem.onmouseout = function() {
-		$('div','.FORGEmenu').css('display', 'none');
-	}
+
 	itemname = document.createElement('a');
 	itemname.innerText = "My Forge";
 	itemname.href = "#";
 
 	submenu = document.createElement('div');
-	
+
 	submenuItem1name = document.createElement('a');
 	submenuItem1name.innerText = "Redmine"
 	submenuItem1name.href = "https://support.forgeservicelab.fi/redmine"
@@ -48,6 +43,14 @@ function createMenu() {
 	menucontainer.appendChild(mainmenu);
 
 	document.body.appendChild(menucontainer);
+
+	$(document).ready(function() {
+		$('.FORGEmenu li').hover(function() {
+			$('div', this).slideDown('fast');
+		}, function() {
+			$('div', this).slideUp('fast');
+		});
+	});
 }
 
 function styleMenu() {
