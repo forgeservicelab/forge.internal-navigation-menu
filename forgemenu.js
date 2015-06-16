@@ -1,27 +1,28 @@
+/* @flow */
 function createMenu() {
-	menucontainer = document.createElement('div');
+	var menucontainer = document.createElement('div');
 	menucontainer.id = "FORGEmenuContainer";
 
-	mainmenu = document.createElement('ul');
+	var mainmenu = document.createElement('ul');
 	mainmenu.className = "FORGEmenu";
 
-	menuitem = document.createElement('li');
+	var menuitem = document.createElement('li');
 
-	itemname = document.createElement('a');
+	var itemname = document.createElement('a');
 	itemname.innerText = "My Forge";
 	itemname.href = "#";
 
-	submenu = document.createElement('div');
+	var submenu = document.createElement('div');
 
-	submenuItem1name = document.createElement('a');
+	var submenuItem1name = document.createElement('a');
 	submenuItem1name.innerText = "Redmine"
 	submenuItem1name.href = "https://support.forgeservicelab.fi/redmine"
 
-	submenuItem2name = document.createElement('a');
+	var submenuItem2name = document.createElement('a');
 	submenuItem2name.innerText = "GitLab"
 	submenuItem2name.href = "https://git.forgeservicelab.fi"
 
-	submenuItem3name = document.createElement('a');
+	var submenuItem3name = document.createElement('a');
 	submenuItem3name.innerText = "OpenStack"
 	submenuItem3name.href = "https://cloud.forgeservicelab.fi"
 
@@ -32,8 +33,8 @@ function createMenu() {
 	menuitem.appendChild(itemname);
 	menuitem.appendChild(submenu);
 
-	menuitem2 = document.createElement('li');
-	item2name = document.createElement('a');
+	var menuitem2 = document.createElement('li');
+	var item2name = document.createElement('a');
 	item2name.innerText = "Sign Out";
 	item2name.href = "https://auth.forgeservicelab.fi/logout";
 	menuitem2.appendChild(item2name);
